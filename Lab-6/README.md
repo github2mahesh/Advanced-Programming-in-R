@@ -1,5 +1,2 @@
-# lab6
-
-<!-- badges: start -->
-[![R-CMD-check](https://github.com/DiniJarvis/lab6/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/DiniJarvis/lab6/actions/workflows/R-CMD-check.yaml)
-<!-- badges: end -->
+# Lab-6
+This lab is done in collaboration with my classmate Dinesh Sundaramoorthy since it is a group task.

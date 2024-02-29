@@ -1,5 +1,3 @@
-# Rlab3_repo
+# Lab-3
+This lab is done in collaboration with my classmate Dinesh Sundaramoorthy since it is group task.
 
-<!-- badges: start -->
-[![R-CMD-check](https://github.com/DiniJarvis/Rlab3_repo/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/DiniJarvis/Rlab3_repo/actions/workflows/R-CMD-check.yaml)
-<!-- badges: end -->

@@ -1,5 +1,2 @@
 # Lab4_repo
-
-<!-- badges: start -->
-[![R-CMD-check](https://github.com/DiniJarvis/Lab4_repo/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/DiniJarvis/Lab4_repo/actions/workflows/R-CMD-check.yaml)
-<!-- badges: end -->
+This lab is done in collaboration with my classmate Dinesh Sundaramoorthy since it is a group task.

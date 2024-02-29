@@ -3,8 +3,8 @@ Type: Package
 Title: Linear Regression
 Version: 1.0
 Date: 2022-09-19
-Author: Dinesh and Mahesh
-Maintainer: <dinsu875@student.liu.se>
+Authors: Umamaheswarababu Maddela and Dinesh Sundaramoorthy
+Maintainer: <umama339@student.liu.se>, <dinsu875@student.liu.se>
 Description: The package is implemented to handle the linear regression models. 
 License: GPL-2
 Encoding: UTF-8

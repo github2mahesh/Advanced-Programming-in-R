@@ -1,0 +1,17 @@
+Package: searchapi
+Type: Package
+Title: Map
+Version: 1.0
+Date: 2022-09-29
+Author: Dinesh and Umamaheswarababu
+Maintainer: Who to complain to <dinsu875@student.liu.se>
+Description: When searched for a place it will show the location based on the latitude and longitude.
+License: GPL-2
+Suggests: 
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Imports: tidyverse,magrittr,leaflet,rvest,knitr,dplyr,httr,jsonlite
+VignetteBuilder: knitr
+RoxygenNote: 7.2.1
+Encoding: UTF-8

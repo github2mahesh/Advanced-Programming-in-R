@@ -1,0 +1,91 @@
+---
+title: "Search Api"
+author: "Dinesh and Umamaheswarababu"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{my-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r echo=FALSE, message=FALSE}
+#library(shiny)
+library(magrittr)
+library(leaflet)
+library(rvest)
+library(knitr)
+library(tidyverse)
+library(dplyr)
+library(httr)
+library(jsonlite)
+```
+
+This vignette summarizes functions of API package that gets connected with Nominatim API and gives examples on how to use them.
+
+The function "latlong" uses search api. It takes the place "place" as input and returns the exact latitude and longitude along with the formatted address.
+
+```{r}
+#function to capture latitude and longitude of place
+latlong<-function(place)
+{
+  
+  
+  
+  z<-list(address=place) 
+  url <- "https://nominatim.openstreetmap.org/search?q="
+  get_coord = paste0(url, place, "&format=geojson")
+
+  response <- read_html(get_coord) %>%
+    html_node("p") %>%
+    html_text() %>%
+    fromJSON()
+  
+  lon <- response$features$geometry$coordinates[[1]][1]
+  lat <- response$features$geometry$coordinates[[1]][2]
+  
+  list("latitude"=lat, "longitude" = lon)
+}
+```
+The shiny app is created to visualize the exact location in map. Once the place name is entered, the output will be the text with latitude, longitude and the map pointing the exact location.
+
+```{r eval=FALSE}
+output$Location <- renderText(paste(c(o1,o2)))
+    
+    icon.fa <- makeAwesomeIcon(
+      icon = "flag", markerColor = "red",
+      library = "fa",
+      iconColor = "black"
+    )
+    
+    output$mymap <- renderLeaflet({
+      leaflet() %>%
+        addProviderTiles(
+          "OpenStreetMap",
+          # give the layer a name
+          group = "OpenStreetMap"
+        ) %>%
+        addAwesomeMarkers(
+          lat = lat,
+          lng = lng,
+          label = "Starting point",
+          icon = icon.fa
+        )
+    })
+```
+
+
+## Reference
+
+1. "More to know how to use leaflets for map outputs"
+([via](https://bookdown.org/nicohahn/making_maps_with_r5/docs/leaflet.html))
+
+2. "More to know how to render map outputs"
+([via](https://shiny.rstudio.com/tutorial/written-tutorial/lesson5/))

@@ -2,8 +2,8 @@ Package: knapsackpack
 Type: Package
 Title: The knapsack Algorithm 
 Version: 1.0
-Author: Dinesh and Mahesh
-Maintainer: <dinsu875@student.liu.se>
+Authors: Umamaheswarababu Maddela and Dinesh Sundaramoorthy
+Maintainer: <umama339@student.liu.se> and <dinsu875@student.liu.se>
 Description: The knapsack problem is a problem in combinatorial optimization: Given a set of items, each with a weight and a value, determine the number of each item to include in a collection so that the total weight is less than or equal to a given limit and the total value is as large as possible.
 License: GPL-2 
 LazyData: true
